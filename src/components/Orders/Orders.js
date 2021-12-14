@@ -9,7 +9,7 @@ const Orders = () => {
     const { user } = useAuth();
     const history = useHistory();
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`, {
+        fetch(`https://protected-temple-56032.herokuapp.com/orders?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }
